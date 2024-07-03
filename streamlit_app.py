@@ -25,8 +25,8 @@ ingredients_list = st.multiselect(
     ,max_selections=5
 )
 
-for fruit_name in my_dataframe:
-    st.text(fruit_name)
+fruit_names = my_dataframe.iloc[:, 0]
+st.text(fruit_names)
 
 if ingredients_list:
     ingredients_string = ''
