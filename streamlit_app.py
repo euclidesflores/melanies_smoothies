@@ -28,7 +28,7 @@ ingredients_list = st.multiselect(
 # Row(FRUIT_NAME='Blueberries')
 for row in my_dataframe.collect():
     fruit_name = row.FRUIT_NAME
-    st.text(fruist_name)
+    st.text(fruit_name)
 
 if ingredients_list:
     ingredients_string = ''
