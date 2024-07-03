@@ -25,7 +25,7 @@ ingredients_list = st.multiselect(
     ,max_selections=5
 )
 
-for row in my_dataframe.collect()
+for row in my_dataframe.collect():
     st.text(row)
 
 if ingredients_list:
