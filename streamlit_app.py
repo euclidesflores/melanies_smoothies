@@ -24,9 +24,11 @@ ingredients_list = st.multiselect(
     ,my_dataframe
     ,max_selections=5
 )
-
+# Row(FRUIT_NAME='Apples')
+# Row(FRUIT_NAME='Blueberries')
 for row in my_dataframe.collect():
-    st.text(row)
+    fruit_name = row.FRUIT_NAME
+    st.text(fruist_name)
 
 if ingredients_list:
     ingredients_string = ''
