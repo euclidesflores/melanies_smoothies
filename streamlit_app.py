@@ -24,14 +24,13 @@ ingredients_list = st.multiselect(
     ,my_dataframe
     ,max_selections=5
 )
-# Row(FRUIT_NAME='Apples')
-# Row(FRUIT_NAME='Blueberries')
-for row in my_dataframe.collect():
-    fruit_name = row.FRUIT_NAME
-    my_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_name)
-    if my_response:
-        update_record = """ update smoothies.public.fruit_options set SEARCH_ON='""" + fruit_name + """' where fruit_name = '""" + fruit_name + """' """
-        session.sql(update_record).collect()
+
+# for row in my_dataframe.collect():
+#     fruit_name = row.FRUIT_NAME
+#     my_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_name)
+#     if my_response:
+#         update_record = """ update smoothies.public.fruit_options set SEARCH_ON='""" + fruit_name + """' where fruit_name = '""" + fruit_name + """' """
+#         session.sql(update_record).collect()
 
 if ingredients_list:
     ingredients_string = ''
