@@ -26,7 +26,7 @@ ingredients_list = st.multiselect(
 )
 
 for fruit_name in my_dataframe:
-    print(fruit_name)
+    print('Cassandra')
 
 if ingredients_list:
     ingredients_string = ''
