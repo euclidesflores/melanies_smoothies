@@ -32,7 +32,7 @@ ingredients_list = st.multiselect(
 #         update_record = """ update smoothies.public.fruit_options set SEARCH_ON='""" + fruit_name + """' where fruit_name = '""" + fruit_name + """' """
 #         session.sql(update_record).collect()
 pd_df = my_dataframe.to_pandas()
-st.dataframe(pd_df)
+# st.dataframe(pd_df)
 # st.stop()
 
 if ingredients_list:
