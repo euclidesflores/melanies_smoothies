@@ -1,6 +1,7 @@
 import streamlit as st
 import requests
 from snowflake.snowpark.functions import col
+import pandas as pd
 
 
 # Write directly to the app
@@ -25,7 +26,9 @@ ingredients_list = st.multiselect(
     ,max_selections=5
 )
 
-st.text(my_dataframe)
+df = pd.DataFrame(my_dataframe)
+first_column_values = df.iloc[:, 0]
+st.text(first_column_values)
 
 if ingredients_list:
     ingredients_string = ''
